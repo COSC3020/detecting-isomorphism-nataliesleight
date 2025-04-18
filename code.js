@@ -7,12 +7,16 @@ function are_isomorphic(graph1, graph2) {
     var degreeArr2 = [];
     for (var i = 0; i < graph1.length; i++) {               // going through each vertex in graph1
         var tmpSum = 0;                                     // counting degrees
-        tmpSum = graph1[i].length;                          // v time
+        for (var j = 0; j < graph1.length; j++) {
+            if (graph1[i][j] != 0) {tmpSum += 1;}
+        }                                                    // v^2 time
         degreeArr1.push(tmpSum);
     }
     for (var i = 0; i < graph2.length; i++) {               // going through each vertex in graph2
         var tmpSum = 0;                                     // counting degrees
-        tmpSum = graph2[i].length;                          // v time
+        for (var j = 0; j < graph2.length; j++) {
+            if (graph2[i][j] != 0) {tmpSum += 1;}
+        }                                                   // v^2 time
         degreeArr2.push(tmpSum);
     }
     degreeArr1.sort();
