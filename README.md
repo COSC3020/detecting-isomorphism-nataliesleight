@@ -20,13 +20,13 @@ The worst case is $\Theta(v^2 * v!)$.
 
 I chose to use undirected, unweighted graphs represented by adjacency matrices. I am using a brute force method to test for isomorphism. 
 
-The function has two sets of nested for loops followed by another for loop that compares the degrees of each graph to each other. Each loop runs v times which gives the total time of all five loops (two are nested) of $2v^2 + v$. The two sorting methods that are called on I believe will add $2nlogn$ time. 
+The function has two sets of nested for loops followed by another for loop that compares the degrees of each graph to each other. Each loop runs v times which gives the total time of all five loops (two are nested) of $2v^2 + v$. The two sorting methods that are called on I believe will add $2vlogv$ time. 
 
 Next an array of indices is created with takes v time. Then a function that generates all the permutations of that array is called which takes v! time, which must be multiplied by another v as it adds each permutation to an array. Thus the total time of this section is $v*v!$.
 
 Next a for loop going through each permutation is used. Within it it calls a function of $v^2$ complexity (as it swaps all rows and columns). Then it compares the two graphs, constant runtime. Thus for this section, the runtime is $v^2 * v!$. 
 
-Altogether, the runtime is $T(v) = v^2 * v! + v * v! + 2v^2 + 2nlogn + v$. 
+Altogether, the runtime is $T(v) = v^2 * v! + v * v! + 2v^2 + 2vlogv + v$. 
 
 And thus the runtime complexity is $T(v) ∈ \Theta(v^2 * v!)$.
 
