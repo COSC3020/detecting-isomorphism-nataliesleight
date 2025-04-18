@@ -26,7 +26,9 @@ Next an array of indices is created with takes v time. Then a function that gene
 
 Next a for loop going through each permutation is used. Within it it calls a function of $v^2$ complexity (as it swaps all rows and columns). Then it compares the two graphs, constant runtime. Thus for this section, the runtime is $v^2 * v!$. 
 
-Altogether, the runtime is $T(v) = v^2 * n! + v * n! + 2v^2 + 2nlogn + v$. And thus the runtime is $T(v) ∈ \Theta(v^2 * v!)$.
+Altogether, the runtime is $T(v) = v^2 * v! + v * v! + 2v^2 + 2nlogn + v$. 
+
+And thus the runtime complexity is $T(v) ∈ \Theta(v^2 * v!)$.
 
 
 ### Sources:
