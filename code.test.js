@@ -1,5 +1,5 @@
 const fs = require('fs');
-const jsc = require('jsverify');
+const assert = require('assert');
 
 eval(fs.readFileSync('code.js')+'');
 
@@ -45,17 +45,16 @@ var testGraph6 = [ // 4 nodes, same degrees as testGraph1 and testGraph2 but NOT
 ];
 
 var result = are_isomorphic(testGraph1, testGraph2);
-jsc.assert(JSON.stringify(result) == JSON.stringify(true));
-
+assert(JSON.stringify(result) == JSON.stringify(true));
 
 var result = are_isomorphic(testGraph3, testGraph4);
-jsc.assert(JSON.stringify(result) == JSON.stringify(true));
+assert(JSON.stringify(result) == JSON.stringify(true));
 
 var result = are_isomorphic(testGraph1, testGraph4);
-jsc.assert(JSON.stringify(result) == JSON.stringify(false));
+assert(JSON.stringify(result) == JSON.stringify(false));
 
 var result = are_isomorphic(testGraph1, testGraph6);
-jsc.assert(JSON.stringify(result) == JSON.stringify(false));
+assert(JSON.stringify(result) == JSON.stringify(false));
 
 var result = are_isomorphic(testGrap2, testGraph5);
-jsc.assert(JSON.stringify(result) == JSON.stringify(false));
+assert(JSON.stringify(result) == JSON.stringify(false));
