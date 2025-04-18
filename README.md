@@ -10,7 +10,7 @@ avoid unnecessarily repeating work.
 
 I have not provided any test code, but you can base yours on test code from
 other exercises. Your tests must check the correctness of the result of running
-the function and run automatically when you commit through a GitHub action.
+the function and run automatically when you commit through a GitHub action. 
 
 ## Runtime Analysis
 
