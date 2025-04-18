@@ -16,7 +16,7 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ time complexity of your algorithm?
 
-The worst case is $\Theta(v!)$.
+The worst case is $\Theta(v^2 * v!)$.
 
 The function has two sets of nested for loops followed by another for loop that compares the degrees of each graph to each other. Each loop runs v times which gives the total time of all five loops (two are nested) of $2v^2 + v$. The two sorting methods that are called on I believe will add $2nlogn$ time. 
 
