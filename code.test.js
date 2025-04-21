@@ -56,5 +56,5 @@ assert(JSON.stringify(result) == JSON.stringify(false));
 var result = are_isomorphic(testGraph1, testGraph6);
 assert(JSON.stringify(result) == JSON.stringify(false));
 
-var result = are_isomorphic(testGrap2, testGraph5);
+var result = are_isomorphic(testGraph2, testGraph5);
 assert(JSON.stringify(result) == JSON.stringify(false));
